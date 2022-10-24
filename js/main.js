@@ -9,22 +9,32 @@
 
 // Creare un ciclo for con variabile da 1 a 100
 
+const container = document.querySelector(".container");
+
 
 for (let i = 1; i <=100; i++) {
+    const element = document.createElement('div');
+    element.classList.add('box');
+    element.innerHTML = i;
+    container.append(element);
 
     if (i % 15 === 0) {
         // nei multipli di 3 viene stampato "FizzBuzz"
         console.log("FizzBuzz");
+        element.innerHTML = ('FizzBuzz')
+        element.classList.add('fizz-buzz');
         
     } else if ( i % 5 === 0) {
         // nei multipli di 5 viene stampato "Buzz"
         console.log("Buzz");
-        
-        
+        element.innerHTML = ('Buzz')
+        element.classList.add('buzz');
+    
     } else if ( i % 3 === 0) {
         // nei multipli di 3 viene stampato "Fizz"
         console.log("Fizz");
-        
+        element.innerHTML = ('Fizz')
+        element.classList.add('fizz');
 
     } else {
         console.log(i);
