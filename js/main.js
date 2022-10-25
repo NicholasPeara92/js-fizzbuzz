@@ -15,7 +15,6 @@ const container = document.querySelector(".container");
 for (let i = 1; i <=100; i++) {
     const element = document.createElement('div');
     element.classList.add('box');
-    container.append(element);
     
     if (i % 15 === 0) {
         // nei multipli di 3 viene stampato "FizzBuzz"
@@ -40,4 +39,5 @@ for (let i = 1; i <=100; i++) {
         console.log(i);
     }
     
+    container.append(element);
 }
